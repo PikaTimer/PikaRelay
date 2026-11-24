@@ -1,0 +1,1 @@
+PIKARELAY-PROBE If you can read this in a browser, the web server is serving this folder. Block it (see server-configs/).

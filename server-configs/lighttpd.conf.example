@@ -1,0 +1,22 @@
+# PikaRelay - lighttpd example. lighttpd ignores .htaccess files, so these rules are required.
+# Needs mod_rewrite, mod_access and mod_fastcgi (or mod_cgi) with PHP configured.
+# For an install in a sub-folder (e.g. /relay), add that folder to each pattern.
+
+server.modules += ( "mod_access", "mod_rewrite" )
+
+# Private folders and dot-files are never served.
+$HTTP["url"] =~ "^/(src|config|data|tests|tools|vendor|docs|server-configs|nbproject)(/|$)" {
+    url.access-deny = ( "" )
+}
+$HTTP["url"] =~ "/\." {
+    url.access-deny = ( "" )
+}
+# Only the front controller runs as PHP.
+$HTTP["url"] =~ "\.php" {
+    $HTTP["url"] !~ "^/index\.php" {
+        url.access-deny = ( "" )
+    }
+}
+
+# Everything that is not an existing file goes to the front controller.
+url.rewrite-if-not-file = ( "^/([^?]*)(\?.*)?$" => "/index.php/$1$2" )

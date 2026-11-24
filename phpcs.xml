@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<ruleset name="PikaRelay">
+    <description>Checks that PikaRelay stays compatible with PHP 7.4 through 8.4.</description>
+    <config name="testVersion" value="7.4-8.4"/>
+    <arg name="extensions" value="php"/>
+    <arg value="sp"/>
+    <file>index.php</file>
+    <file>src</file>
+    <file>tests</file>
+    <rule ref="PHPCompatibility">
+        <!-- False positive: PikaRelay uses PDO SQLite, not the ext/sqlite removed in PHP 5.4. -->
+        <exclude name="PHPCompatibility.Extensions.RemovedExtensions.sqliteRemoved"/>
+    </rule>
+</ruleset>

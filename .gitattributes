@@ -1,0 +1,12 @@
+# Files excluded from release zips built by tools/build-release.sh (git archive).
+/tests            export-ignore
+/tools            export-ignore
+/nbproject        export-ignore
+/composer.json    export-ignore
+/composer.lock    export-ignore
+/phpunit.xml      export-ignore
+/phpcs.xml        export-ignore
+/.gitignore       export-ignore
+/.gitattributes   export-ignore
+/CLAUDE.md        export-ignore
+/project.md       export-ignore

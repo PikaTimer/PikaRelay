@@ -1,0 +1,12 @@
+nbproject/private/
+/.tools/
+/vendor/
+/build/
+/config/config.php
+/config/.config.php.*
+/data/*.sqlite
+/data/*.sqlite-*
+/data/*.sqlite3
+/data/*.db
+/.phpunit.result.cache
+/.phpunit.cache/
