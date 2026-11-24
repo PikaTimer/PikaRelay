@@ -87,3 +87,9 @@ To run the PHPUnit suite against MySQL or MariaDB instead of SQLite, set these e
 
 - `PIKA_TEST_DB=mysql`
 - `PIKA_TEST_MYSQL_HOST`, `PIKA_TEST_MYSQL_PORT`, `PIKA_TEST_MYSQL_NAME`, `PIKA_TEST_MYSQL_USER`, `PIKA_TEST_MYSQL_PASSWORD`
+
+## License
+
+Copyright (C) 2026 John Garner
+
+PikaRelay is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. It is distributed WITHOUT ANY WARRANTY. See [LICENSE](LICENSE) for the full text.

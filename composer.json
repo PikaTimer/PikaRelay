@@ -2,6 +2,7 @@
     "name": "pikatimer/pikarelay",
     "description": "Web relay between PikaReader timing units and PikaDownloader clients",
     "type": "project",
+    "license": "GPL-3.0-or-later",
     "require": {
         "php": ">=7.4",
         "ext-json": "*",
